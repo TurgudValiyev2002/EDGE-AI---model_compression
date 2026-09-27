@@ -1,0 +1,387 @@
+{
+  "memory_definition": "Numerical model tensor payload; excludes activations and runtime overhead; not peak RAM.",
+  "selected_bits": 4,
+  "selected_sparsity": 0.8,
+  "test_windows": 2947,
+  "test_participants": 9,
+  "note": "Frozen models, evaluated once on the official test set; no decisions made from these results.",
+  "fp32": [
+    {
+      "model": "FP32 original",
+      "val_accuracy": 0.9666851749028318,
+      "test_accuracy": 0.9497794367153037,
+      "test_macro_f1": 0.9493015178974261,
+      "test_loss": 0.15269699692726135,
+      "change_pp": 0.0,
+      "generalization_gap_pp": 1.6905738187528052
+    }
+  ],
+  "quantization": [
+    {
+      "model": "FP32",
+      "val_accuracy": 0.9666851749028318,
+      "test_accuracy": 0.9497794367153037,
+      "test_macro_f1": 0.9493015178974261,
+      "test_loss": 0.15269699692726135,
+      "change_pp": 0.0,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "model": "FP16",
+      "val_accuracy": 0.9666851749028318,
+      "test_accuracy": 0.9497794367153037,
+      "test_macro_f1": 0.9493015178974261,
+      "test_loss": 0.15266336500644684,
+      "change_pp": 0.0,
+      "tensor_kib": 157.38671875
+    },
+    {
+      "model": "INT8",
+      "val_accuracy": 0.9677956690727374,
+      "test_accuracy": 0.9477434679334917,
+      "test_macro_f1": 0.9471135506444179,
+      "test_loss": 0.15362513065338135,
+      "change_pp": -0.2035968781812003,
+      "tensor_kib": 79.35546875
+    },
+    {
+      "model": "INT4",
+      "val_accuracy": 0.9639089394780678,
+      "test_accuracy": 0.9507974211062097,
+      "test_macro_f1": 0.9499749020449014,
+      "test_loss": 0.14707526564598083,
+      "change_pp": 0.1017984390905946,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "model": "INT3",
+      "val_accuracy": 0.9239311493614658,
+      "test_accuracy": 0.8920936545639634,
+      "test_macro_f1": 0.8886165793205967,
+      "test_loss": 0.2624403238296509,
+      "change_pp": -5.768578215134035,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "model": "INT2",
+      "val_accuracy": 0.7590227651304831,
+      "test_accuracy": 0.7580590430946725,
+      "test_macro_f1": 0.7588013569237689,
+      "test_loss": 0.5418845415115356,
+      "change_pp": -19.17203936206312,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "model": "INT1",
+      "val_accuracy": 0.8012215435868961,
+      "test_accuracy": 0.7947064811672888,
+      "test_macro_f1": 0.777361313000818,
+      "test_loss": 0.5696812868118286,
+      "change_pp": -15.507295554801493,
+      "tensor_kib": 314.7734375
+    }
+  ],
+  "pruning": [
+    {
+      "sparsity": 0.1,
+      "before_test": 0.9487614523243977,
+      "after_test": 0.9487614523243977,
+      "val_accuracy": 0.9677956690727374,
+      "test_macro_f1": 0.9482836740852335,
+      "best_epoch": 0,
+      "change_pp": -0.10179843909060571,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "sparsity": 0.2,
+      "before_test": 0.9484221241940957,
+      "after_test": 0.9484221241940957,
+      "val_accuracy": 0.966129927817879,
+      "test_macro_f1": 0.9478356557289285,
+      "best_epoch": 0,
+      "change_pp": -0.1357312521208076,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "sparsity": 0.3,
+      "before_test": 0.9484221241940957,
+      "after_test": 0.9484221241940957,
+      "val_accuracy": 0.9655746807329262,
+      "test_macro_f1": 0.9477630392962606,
+      "best_epoch": 0,
+      "change_pp": -0.1357312521208076,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "sparsity": 0.4,
+      "before_test": 0.9497794367153037,
+      "after_test": 0.9497794367153037,
+      "val_accuracy": 0.966129927817879,
+      "test_macro_f1": 0.9492246478974383,
+      "best_epoch": 0,
+      "change_pp": 0.0,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "sparsity": 0.5,
+      "before_test": 0.9477434679334917,
+      "after_test": 0.9477434679334917,
+      "val_accuracy": 0.9700166574125486,
+      "test_macro_f1": 0.9471991058592556,
+      "best_epoch": 0,
+      "change_pp": -0.2035968781812003,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "sparsity": 0.6,
+      "before_test": 0.9389209365456397,
+      "after_test": 0.9389209365456397,
+      "val_accuracy": 0.9666851749028318,
+      "test_macro_f1": 0.9384761367669666,
+      "best_epoch": 0,
+      "change_pp": -1.0858500169664054,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "sparsity": 0.7,
+      "before_test": 0.9236511706820495,
+      "after_test": 0.9236511706820495,
+      "val_accuracy": 0.9583564686285397,
+      "test_macro_f1": 0.923631570148137,
+      "best_epoch": 0,
+      "change_pp": -2.6128266033254244,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "sparsity": 0.8,
+      "before_test": 0.835086528673227,
+      "after_test": 0.9365456396335257,
+      "val_accuracy": 0.9600222098833981,
+      "test_macro_f1": 0.9364909964110834,
+      "best_epoch": 9,
+      "change_pp": -1.3233797081778076,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "sparsity": 0.9,
+      "before_test": 0.67967424499491,
+      "after_test": 0.9294197488971836,
+      "val_accuracy": 0.9539144919489173,
+      "test_macro_f1": 0.9285824441380871,
+      "best_epoch": 10,
+      "change_pp": -2.0359687818120142,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "sparsity": 0.95,
+      "before_test": 0.6348829317950458,
+      "after_test": 0.8988802171700034,
+      "val_accuracy": 0.9322598556357579,
+      "test_macro_f1": 0.8978717138655682,
+      "best_epoch": 10,
+      "change_pp": -5.0899219545300305,
+      "tensor_kib": 314.7734375
+    }
+  ],
+  "combined": [
+    {
+      "model": "FP32",
+      "val_accuracy": 0.9666851749028318,
+      "test_accuracy": 0.9497794367153037,
+      "test_macro_f1": 0.9493015178974261,
+      "test_loss": 0.15269699692726135,
+      "change_pp": 0.0,
+      "estimated_payload_kib": 314.7734375,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "model": "INT4 only",
+      "val_accuracy": 0.9639089394780678,
+      "test_accuracy": 0.9507974211062097,
+      "test_macro_f1": 0.9499749020449014,
+      "test_loss": 0.14707526564598083,
+      "change_pp": 0.1017984390905946,
+      "estimated_payload_kib": 41.5703125,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "model": "Pruned 80% + fine-tuned",
+      "val_accuracy": 0.9600222098833981,
+      "test_accuracy": 0.9365456396335257,
+      "test_macro_f1": 0.9364909964110834,
+      "test_loss": 0.17389711737632751,
+      "change_pp": -1.3233797081778076,
+      "estimated_payload_kib": 73.38671875,
+      "tensor_kib": 314.7734375
+    },
+    {
+      "model": "Pruned + INT4",
+      "val_accuracy": 0.9594669627984453,
+      "test_accuracy": 0.9389209365456397,
+      "test_macro_f1": 0.9389040437380863,
+      "test_loss": 0.16605177521705627,
+      "change_pp": -1.0858500169664054,
+      "estimated_payload_kib": 19.9833984375,
+      "tensor_kib": 314.7734375
+    }
+  ],
+  "onnx": [
+    {
+      "model": "final_fp32.onnx",
+      "val_accuracy": 0.9594669627984453,
+      "test_accuracy": 0.9389209365456397,
+      "test_macro_f1": 0.9389040437380863,
+      "test_loss": 0.16605177521705627,
+      "change_pp": -1.0858500169664054,
+      "file_kib": 321.484375
+    },
+    {
+      "model": "final_int4.onnx, default session",
+      "val_accuracy": 0.9594669627984453,
+      "test_accuracy": 0.9389209365456397,
+      "test_macro_f1": 0.9389040437380863,
+      "test_loss": 0.16605176031589508,
+      "change_pp": -1.0858500169664054,
+      "file_kib": 41.9365234375
+    },
+    {
+      "model": "final_int4.onnx, folding requested",
+      "val_accuracy": 0.9594669627984453,
+      "test_accuracy": 0.9389209365456397,
+      "test_macro_f1": 0.9389040437380863,
+      "test_loss": 0.16605177521705627,
+      "change_pp": -1.0858500169664054,
+      "file_kib": 41.9365234375
+    },
+    {
+      "model": "pruned80_int8_ort.onnx",
+      "val_accuracy": 0.960577456968351,
+      "test_accuracy": 0.9375636240244316,
+      "test_macro_f1": 0.9375392591892929,
+      "test_loss": 0.1730397790670395,
+      "change_pp": -1.221581269087213,
+      "file_kib": 84.5859375
+    },
+    {
+      "model": "pruned80_int4_ort.onnx",
+      "val_accuracy": 0.9578012215435869,
+      "test_accuracy": 0.9379029521547336,
+      "test_macro_f1": 0.9378494559265161,
+      "test_loss": 0.17332938313484192,
+      "change_pp": -1.187648456057011,
+      "file_kib": 59.3583984375
+    }
+  ],
+  "memory": [
+    {
+      "model": "FP32",
+      "tensor_kib": 314.7734375,
+      "relative_percent": 100.0
+    },
+    {
+      "model": "FP16",
+      "tensor_kib": 157.38671875,
+      "relative_percent": 50.0
+    },
+    {
+      "model": "INT8",
+      "tensor_kib": 79.35546875,
+      "relative_percent": 25.210344742001936
+    },
+    {
+      "model": "INT4",
+      "tensor_kib": 314.7734375,
+      "relative_percent": 100.0
+    },
+    {
+      "model": "INT3",
+      "tensor_kib": 314.7734375,
+      "relative_percent": 100.0
+    },
+    {
+      "model": "INT2",
+      "tensor_kib": 314.7734375,
+      "relative_percent": 100.0
+    },
+    {
+      "model": "INT1",
+      "tensor_kib": 314.7734375,
+      "relative_percent": 100.0
+    },
+    {
+      "model": "Pruned 80% + fine-tuned",
+      "tensor_kib": 314.7734375,
+      "relative_percent": 100.0
+    },
+    {
+      "model": "Final: pruned 80% + INT4",
+      "tensor_kib": 314.7734375,
+      "relative_percent": 100.0
+    }
+  ],
+  "summary": [
+    {
+      "model": "PyTorch FP32 full model (.pt)",
+      "file_kib": 317.8486328125,
+      "tensor_kib": 314.7734375,
+      "test_accuracy": 0.9497794367153037,
+      "test_macro_f1": 0.9493015178974261,
+      "change_pp": 0.0,
+      "latency_ms": 0.09545950015308335
+    },
+    {
+      "model": "Selected model, decoded FP32 (.pt)",
+      "file_kib": 317.9697265625,
+      "tensor_kib": 314.7734375,
+      "test_accuracy": 0.9389209365456397,
+      "test_macro_f1": 0.9389040437380863,
+      "change_pp": -1.0858500169664054,
+      "latency_ms": 0.09916475013596937
+    },
+    {
+      "model": "final_fp32.onnx",
+      "file_kib": 321.484375,
+      "tensor_kib": null,
+      "test_accuracy": 0.9389209365456397,
+      "test_macro_f1": 0.9389040437380863,
+      "change_pp": -1.0858500169664054,
+      "latency_ms": 0.05349749990273267
+    },
+    {
+      "model": "final_int4.onnx, default session",
+      "file_kib": 41.9365234375,
+      "tensor_kib": null,
+      "test_accuracy": 0.9389209365456397,
+      "test_macro_f1": 0.9389040437380863,
+      "change_pp": -1.0858500169664054,
+      "latency_ms": 0.2430847502546385
+    },
+    {
+      "model": "final_int4.onnx, folding requested",
+      "file_kib": 41.9365234375,
+      "tensor_kib": null,
+      "test_accuracy": 0.9389209365456397,
+      "test_macro_f1": 0.9389040437380863,
+      "change_pp": -1.0858500169664054,
+      "latency_ms": 0.04590725002344698
+    },
+    {
+      "model": "pruned80_int8_ort.onnx",
+      "file_kib": 84.5859375,
+      "tensor_kib": null,
+      "test_accuracy": 0.9375636240244316,
+      "test_macro_f1": 0.9375392591892929,
+      "change_pp": -1.221581269087213,
+      "latency_ms": 0.053848999668844044
+    },
+    {
+      "model": "pruned80_int4_ort.onnx",
+      "file_kib": 59.3583984375,
+      "tensor_kib": null,
+      "test_accuracy": 0.9379029521547336,
+      "test_macro_f1": 0.9378494559265161,
+      "change_pp": -1.187648456057011,
+      "latency_ms": 0.04155024973442778
+    }
+  ]
+}
